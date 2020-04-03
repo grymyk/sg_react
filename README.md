@@ -1,3 +1,17 @@
+# Stat Graph -- Statistics Sandbox
+* URL: [statgraph.grymyk.com](http://statgraph.grymyk.com//)
+         
+## Parameters
+* Expected value Variance
+* Average
+* Random Distribution
+
+## toDo
+* Poisson Distribution
+* Normal Distribution
+* Matrix Usage
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
