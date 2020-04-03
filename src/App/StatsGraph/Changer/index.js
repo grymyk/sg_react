@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './changer.scss'
+
 class Changer extends React.Component {
     constructor(props) {
         super(props);
@@ -17,7 +19,7 @@ class Changer extends React.Component {
         let size = this.props.size;
 
         return (
-            <>
+            <div id="changer">
                 <h3>Change Number Points</h3>
 
                 <form id="sizer">
@@ -27,6 +29,7 @@ class Changer extends React.Component {
 
                     <div id="input_holder">
                         <div id="input_range_holder">
+                            <label htmlFor="input_range">INPUT RANGE</label>
                             <input id="input_range"
                                type="range"
                                name="numberN"
@@ -36,15 +39,17 @@ class Changer extends React.Component {
                                value={size}
                                onChange={(event) => this.handleChange(event)}
                             />
-                            <label htmlFor="input_range">INPUT RANGE:</label>
+
                         </div>
-                        <div>
-                            <label className="begin">0</label>
-                            <label className="end">100</label>
+                        <div className="borders">
+                            <div>
+                                <label className="begin">0</label>
+                                <label className="end">100</label>
+                            </div>
                         </div>
                     </div>
                 </form>
-            </>
+            </div>
         )
     }
 

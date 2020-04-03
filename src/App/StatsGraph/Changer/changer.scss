@@ -1,0 +1,55 @@
+#changer {
+  //margin: 0 0 0 35px;
+  //width: 245px;
+}
+
+h3 {
+  margin: 40px 0 0 35px;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+#sizer {
+  width: 320px;
+  margin: 10px auto 0;
+}
+
+#output_holder {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 0 50px;
+  width: 245px;
+}
+
+#input_holder {
+  margin: 5px 0 0 50px;
+  width: 245px;
+}
+
+#input_range_holder label {
+  display: block;
+
+  padding: 0;
+}
+
+#input_range {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+.borders {
+  font-size: 16px;
+  overflow: hidden;
+  margin: 10px 0 0;
+}
+
+.begin, {
+  float: left;
+}
+
+.end, {
+  float: right;
+}

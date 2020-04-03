@@ -168,7 +168,7 @@ class Stats {
         let xAvr = (avrX - nShift) * xUnit + this.leftPadHorMark;
 
         // this.saveState(this.drawDispersia)(xAvr, yAvr, sigmaPX, '#4f81be');
-        this.drawer.drawDispersiaSaveState(xAvr, yAvr, sigmaPX, '#be8a4f');
+        this.drawer.drawDispersiaSaveState(xAvr, yAvr, sigmaPX, '#ff6600');
         // this.drawer.drawDispersia(xAvr, yAvr, sigmaPX);
 
         return sigma;
@@ -441,7 +441,8 @@ class Stats {
 
             let y = this.heightCanvas -  P[i] * yUnit;
 
-            this.drawer.drawValueLineSaveState(x, y, '#4f81be');
+            // this.drawer.drawPoint(x, y);
+            this.drawer.drawValueLineSaveState(x, y, '#06f');
         }
     }
 

@@ -113,7 +113,7 @@ class Drawer {
 
         y += vertShift;
 
-        this.ctx.font = '20px serif';
+        this.ctx.font = '16px serif';
         this.ctx.fillText(text, x, y);
     }
 
@@ -158,7 +158,7 @@ class Drawer {
         x -= horPad;
         let y = this.heightCanvas + vertPad;
 
-        this.ctx.font = '20px serif';
+        this.ctx.font = '16px serif';
         this.ctx.fillText(text, x, y);
     }
 
