@@ -1,5 +1,4 @@
 import {Drawer} from "./drawer.js";
-import './stats.scss';
 
 class Stats {
     constructor(props) {

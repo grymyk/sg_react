@@ -2,13 +2,6 @@
   //margin: 0 0 0 35px;
   //width: 245px;
 }
-
-h3 {
-  margin: 40px 0 0 35px;
-  padding: 0;
-  text-transform: uppercase;
-}
-
 #sizer {
   width: 320px;
   margin: 10px auto 0;
@@ -17,25 +10,27 @@ h3 {
 #output_holder {
   font-size: 20px;
   font-weight: 700;
-  margin: 0 0 0 50px;
+  margin: 0;
   width: 245px;
 }
 
 #input_holder {
-  margin: 5px 0 0 50px;
+  margin: 5px 0 0 55px;
   width: 245px;
+  padding: 0;
 }
 
-#input_range_holder label {
+#sizer > label {
   display: block;
-
   padding: 0;
+  margin: 50px 0 10px 55px;
+  text-transform: uppercase;
 }
 
 #input_range {
   display: block;
   width: 100%;
-  margin: 0;
+  margin: 15px 0 0;
   padding: 0;
 }
 
@@ -43,7 +38,7 @@ h3 {
 .borders {
   font-size: 16px;
   overflow: hidden;
-  margin: 10px 0 0;
+  margin: 20px 0 0;
 }
 
 .begin, {

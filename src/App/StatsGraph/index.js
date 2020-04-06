@@ -1,7 +1,5 @@
 import React from "react";
 
-import "./index.scss";
-
 import Heading from "./Heading";
 import Viewer from "./Viewer";
 import Changer from "./Changer";
