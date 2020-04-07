@@ -3,10 +3,10 @@ import './heading.scss'
 
 function Heading() {
     return (
-        <div className="logo">
-            logo
-            <h1>Statistics Sandbox</h1>
-        </div>
+        <>
+            <div className="logo"></div>
+            <h1>Statistics Graghics</h1>
+        </>
     )
 }
 

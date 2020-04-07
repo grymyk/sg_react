@@ -1,5 +1,19 @@
 import {Drawer} from "./drawer.js";
 
+// let count = 0;
+//
+// let getDigits = (num) => {
+//     console.log('num:', num);
+//
+//     if (num === 0) {
+//         return 1;
+//     }
+//
+//     let quot = Math.floor(num / 10);
+//     getDigits(quot);
+//     return count += 1;
+// };
+
 class Stats {
     constructor(props) {
         let {
@@ -247,11 +261,18 @@ class Stats {
         this.sizeXMark = Math.floor(this.widthCanvas / size);
     }
 
-    getXPosition(size) {
+    getXPosition(size, mark) {
         let xMarks = [];
 
+        // let digits = getDigits(mark);
+        // count = 0;
+        //
+        // console.log('\ndigits:', digits);
+        //
+        // let markFactor = digits;
+
         for (let i = 0; i < size; i += 1) {
-            let x = i * this.sizeXMark + this.leftPadHorMark;
+            let x = (i * this.sizeXMark + this.leftPadHorMark);
 
             xMarks.push(x);
         }
@@ -292,12 +313,12 @@ class Stats {
         this.sizeXMarkUnit = this.fixed(size);
     }
 
-    fillXValueMarks(min, size) {
+    fillXValueMarks(min, number) {
         let marks = [];
 
         let x = min;
 
-        for (let i = 0; i < size; i += 1) {
+        for (let i = 0; i < number; i += 1) {
             x = i * this.sizeXMarkUnit;
 
             marks.push(this.fixed(x, 3));
@@ -346,18 +367,22 @@ class Stats {
         this.drawer.drawLabelSaveState(options);
     }
 
-    drawXaxis(min, max, size) {
+    drawXaxis(min, max) {
+        const number = 5;
         this.drawXLabel();
 
         this.drawer.drawLine('hor');
 
         if (max > min) {
-            let valueXMarks = this.fillXValueMarks(min, size);
-            let xMarks = this.getXPosition(size);
+            let valueXMarks = this.fillXValueMarks(min, number);
+
+            let lastMark = valueXMarks[number-1];
+
+            let xMarks = this.getXPosition(number, lastMark);
 
             this.drawer.drawHorScaleMark(valueXMarks, xMarks);
         } else {
-            console.log('max <= min');
+            // console.log('max <= min');
         }
     }
 
@@ -461,15 +486,13 @@ class Stats {
             }
         } = options;
 
-        let size = data.value.length;
-
         this.setSizeXMarkUnit(xMin, xMax);
         this.setSizeXMark(this.numberXMark);
 
         this.setSizeYMarkUnit(yMax);
         this.setSizeYMark(this.numberYMark + 1);
 
-        this.drawXaxis(xMin, xMax, size);
+        this.drawXaxis(xMin, xMax);
         this.drawYaxis(yMin, yMax);
 
         this.drawGraph(data);

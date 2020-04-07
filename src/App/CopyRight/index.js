@@ -1,5 +1,7 @@
 import React from 'react'
 
+import './copyright.scss'
+
 function CopyRight() {
 	return (
 		<div className="footer">
