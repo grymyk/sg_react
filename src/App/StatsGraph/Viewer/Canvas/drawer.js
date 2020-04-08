@@ -152,21 +152,24 @@ class Drawer {
     }
 
     drawHorMarkText(text, x) {
-        const horPad = 10;
         const vertPad = 28;
 
-        x -= horPad;
         let y = this.heightCanvas + vertPad;
 
         this.ctx.font = '16px serif';
         this.ctx.fillText(text, x, y);
     }
 
-    drawHorScaleMark(value, x) {
-        for (let i = 0, len = value.length; i < len; i += 1) {
+    drawHorScaleMark(value, x, textFactor) {
+        let minIndex = 0
+        let oneDigitFactor = 4
+        this.drawHorMarkText(value[minIndex], x[minIndex] - oneDigitFactor);
+        this.drawHorMarkline(x[minIndex]);
+
+        for (let i = 1, len = value.length; i < len; i += 1) {
             this.drawHorMarkline(x[i]);
 
-            this.drawHorMarkText(value[i], x[i]);
+            this.drawHorMarkText(value[i], x[i] - textFactor);
         }
     }
 

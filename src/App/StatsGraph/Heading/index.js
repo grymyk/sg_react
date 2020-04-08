@@ -5,7 +5,7 @@ function Heading() {
     return (
         <>
             <div className="logo"></div>
-            <h1>Statistics Graghics</h1>
+            <h1>Statistics Graphics</h1>
         </>
     )
 }

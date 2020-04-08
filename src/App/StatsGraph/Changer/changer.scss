@@ -15,8 +15,8 @@
 }
 
 #input_holder {
-  margin: 5px 0 0 55px;
-  width: 245px;
+  margin: 5px 0 0 63px;
+  width: 236px;
   padding: 0;
 }
 
@@ -38,14 +38,21 @@
 
 .borders {
   font-size: 16px;
-  overflow: hidden;
+  //overflow: hidden;
   margin: 20px 0 0;
+  position: relative;
 }
 
 .begin, {
-  float: left;
+  //float: left;
+  position: relative;
+  //margin: 0 0 0 -2px
+  left: -103px;
 }
 
 .end, {
-  float: right;
+  //float: right;
+  position: relative;
+  //margin: 0 -11px 0 0;
+  right: -114px;
 }

@@ -1,0 +1,20 @@
+.range{
+  height: 5px;
+  border: 1px solid black;
+  position: relative;
+  margin: 34px 0 0;
+  background-color: #3fa83857;
+  top: 20px;
+}
+.slider{
+  height: 5px;
+  width: 0;
+  background-color: rgb(63, 168, 56);
+}
+
+.tooltip {
+  position: absolute;
+  padding: 5px;
+  top: -50px;
+  font-size: 20px;
+}

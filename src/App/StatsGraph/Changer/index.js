@@ -2,6 +2,7 @@ import React from 'react';
 
 import './changer.scss'
 import './input_range.scss'
+import Progress from "./Progress";
 
 class Changer extends React.Component {
     constructor(props) {
@@ -25,10 +26,12 @@ class Changer extends React.Component {
                     <label htmlFor="input_range">change number points</label>
 
                     <div id="input_holder">
+                        <Progress size = {size} />
+
                         <div id="input_range_holder">
-                            <div id="output_holder">
-                                <output name="result">{size}</output>
-                            </div>
+                            {/*<div id="output_holder">*/}
+                            {/*    <output name="result">{size}</output>*/}
+                            {/*</div>*/}
 
                             <input id="input_range"
                                type="range"
@@ -41,7 +44,6 @@ class Changer extends React.Component {
                             />
                         </div>
 
-
                         <div className="borders">
                             <div>
                                 <label className="begin">0</label>
@@ -49,8 +51,6 @@ class Changer extends React.Component {
                             </div>
                         </div>
                     </div>
-
-
                 </form>
             </div>
         )

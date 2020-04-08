@@ -1,18 +1,16 @@
 import {Drawer} from "./drawer.js";
 
-// let count = 0;
-//
-// let getDigits = (num) => {
-//     console.log('num:', num);
-//
-//     if (num === 0) {
-//         return 1;
-//     }
-//
-//     let quot = Math.floor(num / 10);
-//     getDigits(quot);
-//     return count += 1;
-// };
+let count = 0;
+
+let getDigits = (num) => {
+    if (num === 0) {
+        return 1;
+    }
+
+    let quot = Math.floor(num / 10);
+    getDigits(quot);
+    return count += 1;
+};
 
 class Stats {
     constructor(props) {
@@ -112,7 +110,7 @@ class Stats {
             digit = 1;
         }
 
-        return digit ;
+        return digit;
     }
 
     average(data) {
@@ -264,15 +262,8 @@ class Stats {
     getXPosition(size, mark) {
         let xMarks = [];
 
-        // let digits = getDigits(mark);
-        // count = 0;
-        //
-        // console.log('\ndigits:', digits);
-        //
-        // let markFactor = digits;
-
         for (let i = 0; i < size; i += 1) {
-            let x = (i * this.sizeXMark + this.leftPadHorMark);
+            let x = i * this.sizeXMark + this.leftPadHorMark;
 
             xMarks.push(x);
         }
@@ -367,6 +358,15 @@ class Stats {
         this.drawer.drawLabelSaveState(options);
     }
 
+    getTextFactor(mark) {
+        let digits = getDigits(mark);
+        count = 0;
+
+        const FACTOR = 4
+
+        return digits * FACTOR;
+    }
+
     drawXaxis(min, max) {
         const number = 5;
         this.drawXLabel();
@@ -377,10 +377,11 @@ class Stats {
             let valueXMarks = this.fillXValueMarks(min, number);
 
             let lastMark = valueXMarks[number-1];
+            let textFactor = this.getTextFactor(lastMark)
 
-            let xMarks = this.getXPosition(number, lastMark);
+            let xMarks = this.getXPosition(number);
 
-            this.drawer.drawHorScaleMark(valueXMarks, xMarks);
+            this.drawer.drawHorScaleMark(valueXMarks, xMarks, textFactor);
         } else {
             // console.log('max <= min');
         }
